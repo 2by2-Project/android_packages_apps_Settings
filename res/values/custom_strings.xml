@@ -4,6 +4,11 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Home settings -->
+    <string name="launcher_keyguard_settings_title">Home settings</string>
+    <string name="launcher_keyguard_settings_summary">Customize the Trebuchet Launcher</string>
+    <string name="gesture_preference_summary">Use gestures and keys to quickly open frequently used functions</string>
+
     <!-- Cycle through ringer modes gesture -->
     <string name="prevent_ringing_option_cycle">Cycle through modes</string>
     <string name="prevent_ringing_option_cycle_summary">On (cycle through modes)</string>
