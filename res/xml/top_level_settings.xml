@@ -54,7 +54,7 @@
         android:fragment="com.android.settings.applications.AppDashboardFragment"
         android:icon="@drawable/ic_apps"
         android:key="top_level_apps"
-        android:order="-130"
+        android:order="-40"
         android:title="@string/apps_dashboard_title"
         android:summary="@string/app_and_notification_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_apps"/>
@@ -63,7 +63,7 @@
         android:fragment="com.android.settings.notification.ConfigureNotificationSettings"
         android:icon="@drawable/ic_notifications"
         android:key="top_level_notifications"
-        android:order="-120"
+        android:order="-134"
         android:title="@string/configure_notification_settings"
         android:summary="@string/notification_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_notifications"/>
@@ -92,7 +92,7 @@
         android:fragment="com.android.settings.notification.SoundSettings"
         android:icon="@drawable/ic_volume_up_24dp"
         android:key="top_level_sound"
-        android:order="-90"
+        android:order="-135"
         android:title="@string/sound_settings"
         android:summary="@string/sound_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_sound"/>
@@ -101,7 +101,7 @@
         android:fragment="com.android.settings.DisplaySettings"
         android:icon="@drawable/ic_settings_display_white"
         android:key="top_level_display"
-        android:order="-80"
+        android:order="-137"
         android:title="@string/display_settings"
         android:summary="@string/display_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_display"
@@ -110,7 +110,7 @@
     <com.android.settings.widget.RestrictedHomepagePreference
         android:icon="@drawable/ic_settings_wallpaper_white"
         android:key="top_level_wallpaper"
-        android:order="-70"
+        android:order="-138"
         android:title="@string/wallpaper_settings_title"
         android:summary="@string/wallpaper_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_wallpaper"
@@ -129,7 +129,7 @@
     <com.android.settings.widget.HomepagePreference
         android:icon="@drawable/ic_settings_safety_center"
         android:key="top_level_safety_center"
-        android:order="-55"
+        android:order="-30"
         android:title="@string/safety_center_title"
         android:summary="@string/safety_center_summary"
         settings:highlightableMenuKey="@string/menu_key_safety_center"
@@ -139,7 +139,7 @@
         android:fragment="com.android.settings.security.SecuritySettings"
         android:icon="@drawable/ic_settings_security_white"
         android:key="top_level_security"
-        android:order="-50"
+        android:order="-45"
         android:title="@string/security_settings_title"
         android:summary="@string/security_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_security"
@@ -149,7 +149,7 @@
         android:fragment="com.android.settings.privacy.PrivacyDashboardFragment"
         android:icon="@drawable/ic_settings_privacy"
         android:key="top_level_privacy"
-        android:order="-40"
+        android:order="-45"
         android:title="@string/privacy_dashboard_title"
         android:summary="@string/privacy_dashboard_summary"
         settings:highlightableMenuKey="@string/menu_key_privacy"
@@ -159,7 +159,7 @@
         android:fragment="com.android.settings.location.LocationSettings"
         android:icon="@drawable/ic_settings_location"
         android:key="top_level_location"
-        android:order="-30"
+        android:order="-61"
         android:title="@string/location_settings_title"
         android:summary="@string/location_settings_loading_app_permission_stats"
         settings:highlightableMenuKey="@string/menu_key_location"
@@ -179,7 +179,7 @@
         android:fragment="com.android.settings.accounts.AccountDashboardFragment"
         android:icon="@drawable/ic_settings_accounts"
         android:key="top_level_accounts"
-        android:order="-10"
+        android:order="-35"
         android:title="@string/account_dashboard_title_with_passkeys"
         android:summary="@string/summary_placeholder"
         settings:highlightableMenuKey="@string/menu_key_accounts"
@@ -207,10 +207,56 @@
     <com.android.settings.widget.HomepagePreference
         android:icon="@drawable/ic_help"
         android:key="top_level_support"
-        android:order="100"
+        android:order="9"
         android:title="@string/page_tab_title_support"
         android:summary="@string/support_summary"
         settings:highlightableMenuKey="@string/menu_key_support"
         settings:controller="com.android.settings.support.SupportPreferenceController"/>
+
+    <!-- 2by2 Project Edit -->
+    <Preference
+        android:key="gesture_settings"
+        android:title="@string/gesture_preference_title"
+        android:summary="@string/gesture_preference_summary"
+        android:icon="@drawable/ic_homepage_settings_gestures"
+        android:order="-130"
+        android:fragment="com.android.settings.gestures.GestureSettings"
+        settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
+
+    <Preference
+        android:key="top_level_launcher_keyguard"
+        android:title="@string/launcher_keyguard_settings_title"
+        android:summary="@string/launcher_keyguard_settings_summary"
+        android:icon="@drawable/ic_homepage_launcher_keyguard"
+        android:order="-136">
+        <intent android:targetPackage="com.android.launcher3"
+                android:targetClass="com.android.launcher3.settings.SettingsActivity"/>
+    </Preference>
+
+    <Preference
+        android:key="additional_system_update_settings"
+        android:title="@string/additional_system_update_settings_list_item_title"
+        android:order="5"
+        settings:controller="com.android.settings.system.AdditionalSystemUpdatePreferenceController">
+        <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="@string/additional_system_update"
+                android:targetClass="@string/additional_system_update_menu"/>
+    </Preference>
+
+    <Preference
+        android:key="system_update_settings"
+        android:title="@string/system_update_settings_list_item_title"
+        android:summary="@string/summary_placeholder"
+        android:icon="@drawable/ic_homepage_system_update"
+        android:order="5"
+        settings:keywords="@string/keywords_system_update_settings"
+        settings:controller="com.android.settings.system.SystemUpdatePreferenceController">
+        <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS"/>
+    </Preference>
+
+    <PreferenceCategory android:order="-19"/>
+    <PreferenceCategory android:order="-59"/>
+    <PreferenceCategory android:order="-115"/>
+    <PreferenceCategory android:order="-139"/>
 
 </PreferenceScreen>
