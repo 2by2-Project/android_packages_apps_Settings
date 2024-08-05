@@ -489,4 +489,7 @@ public class Settings extends SettingsActivity {
 
     /** Activity for the Reset mobile network settings. */
     public static class ResetMobileNetworkSettingsActivity extends SettingsActivity { /* empty */ }
+
+    // 2by2 Project Additions.
+    public static class CustomSettingsActivity extends SettingsActivity {}
 }
