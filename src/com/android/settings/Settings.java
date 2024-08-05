@@ -496,4 +496,7 @@ public class Settings extends SettingsActivity {
 
     public static class HearingDevicesActivity extends SettingsActivity { /* empty */ }
     public static class HearingDevicesPairingActivity extends SettingsActivity { /* empty */ }
+
+    // 2by2 Project Additions.
+    public static class CustomSettingsActivity extends SettingsActivity {}
 }
