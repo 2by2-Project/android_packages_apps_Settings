@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="CustomPreferenceCategoryStyle" parent="Preference.Category">
-        <item name="android:layout">@layout/preference_category_material_customized</item>
-    </style>
-</resources>
