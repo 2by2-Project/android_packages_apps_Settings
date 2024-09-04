@@ -122,5 +122,6 @@
     <!-- 2by2 Project Edit -->
     <PreferenceCategory android:order="-41"/>
     <PreferenceCategory android:order="-230"/>
+    <Preference android:order="9999" android:enabled="false"/>
 
 </PreferenceScreen>
