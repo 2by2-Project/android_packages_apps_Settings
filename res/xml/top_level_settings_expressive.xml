@@ -48,6 +48,15 @@
         android:order="-120"
         android:key="top_level_personalize_category">
         <com.android.settings.widget.HomepagePreference
+            android:fragment="jp.project2by2.settings.CustomSettings"
+            android:icon="@drawable/ic_homepage_custom_settings"
+            android:key="top_level_custom_settings"
+            android:order="-70"
+            android:title="@string/custom_dashboard_title"
+            settings:highlightableMenuKey="@string/menu_key_custom_settings"
+            settings:controller="jp.project2by2.settings.TopLevelCustomSettingsPreferenceController"/>
+
+        <com.android.settings.widget.HomepagePreference
             android:fragment="com.android.settings.applications.AppDashboardFragment"
             android:icon="@drawable/ic_homepage_apps"
             android:key="top_level_apps"
