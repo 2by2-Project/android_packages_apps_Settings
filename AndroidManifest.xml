@@ -5484,6 +5484,22 @@
             </intent-filter>
         </activity>
 
+        <!-- 2byTricks -->
+        <activity
+            android:name="Settings$CustomSettingsActivity"
+            android:label="@string/custom_dashboard_title"
+            android:icon="@drawable/ic_homepage_custom_settings"
+            android:exported="true">
+            <intent-filter android:priority="1">
+                <action android:name="com.android.settings.action.SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="jp.project2by2.settings.CustomSettings" />
+            <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
+                       android:value="@string/menu_key_system" />
+        </activity>
+
         <!-- This is the longest AndroidManifest.xml ever. -->
     </application>
 </manifest>
