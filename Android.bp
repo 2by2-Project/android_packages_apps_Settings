@@ -51,6 +51,7 @@ android_library {
         "SettingsLintDefaults",
         "SpaPrivilegedLib-defaults",
     ],
+
     srcs: [
         "src/**/*.java",
         "src/**/*.kt",
